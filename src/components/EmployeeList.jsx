@@ -1,14 +1,20 @@
 import React from 'react'
 import EmployeeListItem from './EmployeeListItem'
+
+const employees = [
+  { name: "James King", position: "President and CEO" },
+  { name: "Julie Taylor", position: "VP of Marketing" },
+  { name: "Eugene Lee", position: "CFO" },
+  { name: "John Williams", position: "VP of Engineering" },
+  { name: "Ray Moore", position: "VP of Sales" },
+  { name: "Paul Jones", position: "QA Manager" }
+];
 function EmployeeList() {
   return (
     <div>
-      <EmployeeListItem name="James King" position="President and CEO" />
-      <EmployeeListItem name="Julie Taylor" position="VP of Marketings" />
-      <EmployeeListItem name="Eugene Lee" position="CFO" />
-      <EmployeeListItem name="John Williams" position="VP of Engineering" />
-      <EmployeeListItem name="Ray Moore" position="VP of Sales" />
-      <EmployeeListItem name="Paul Jones" position="QA Manager" />
+      {employees.map((employee) => (
+        <EmployeeListItem key={employee.name} name={employee.name} position={employee.position} />
+      ))}
     </div>
   )
 }
