@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Employee Directory</div>
+    <h1 style={{padding: "10px"}}>Employee Directory</h1>
   )
 }
 
